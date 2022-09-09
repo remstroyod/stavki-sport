@@ -1,0 +1,35 @@
+/**
+ * Breakpoints
+ */
+$breakpoints: (
+        xs: 479px,
+        sm: 767px,
+        sm-min: 768px,
+        md: 991px,
+        md-min: 992px,
+        lg: 1199px,
+);
+
+/**
+ * Body
+ */
+$font-body          :   'PF DinDisplay Pro', sans-serif;
+
+/**
+ * Colors
+ */
+
+$color-secondary    :   #0B2837;
+$color-blue         :   #1E88E5;
+$color-black        :   #121212;
+$color-dark-alt     :   #242526;
+$color-gray         :   #9A9D9F;
+$color-yellow       :   #ff9600;
+$color-white        :   #fff;
+$color-gray-light   :   #F5F5F5;
+$color-red          :   #F83030;
+$color-red-strong   :   #67062a;
+$color-green        :   #4CAF50;
+$color-purple       :   #7C62E3;
+$color-pink         :   #e01d4f;
+$color-orange       :   #FAAB00;

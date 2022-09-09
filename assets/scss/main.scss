@@ -1,0 +1,43 @@
+@import url('../fonts/fontello/css/fontello.css');
+@import url('../fonts/fontello/css/fontello-codes.css');
+
+/**
+ * Variables
+ */
+@import "base/variables";
+
+/**
+ * Mixins
+ */
+@import "base/mixins";
+@import "base/mixins-media";
+
+/**
+ * Global
+ */
+@import "base/fonts";
+@import "base/normalize";
+@import "base/base";
+
+/**
+ * Modules
+ */
+@import "modules/btn";
+@import "modules/badge";
+
+/**
+ * Layout
+ */
+@import "layout/sections/header";
+@import "layout/sections/content";
+@import "layout/sections/footer";
+@import "layout/sections/sidebar";
+@import "layout/sections/favorite";
+@import "layout/sections/reviews";
+@import "layout/sections/products";
+
+/**
+ * Pages
+ */
+@import "layout/page/home/index";
+

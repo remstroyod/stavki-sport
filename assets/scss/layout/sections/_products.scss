@@ -1,0 +1,301 @@
+.products {
+  margin: 0 0 30px 0;
+
+  &__list {
+
+    > li {
+
+      &:not(:last-child) {
+        margin: 0 0 20px 0;
+        @include media_min(sm-min) {
+          margin: 0 0 30px 0;
+        }
+
+      }
+
+    }
+
+    &-card {
+      $background-gray: #FAFAFA;
+      $border-grey: #E0E0E0;
+
+      border: 1px solid $border-grey;
+      position: relative;
+      z-index: 1;
+
+      &-header {
+        padding: 15px 20px;
+        background-color: $background-gray;
+        border-bottom: 1px solid $border-grey;
+        @include media_min(sm-min) {
+          margin-left: 230px;
+          padding: 15px;
+        }
+
+        .badge {
+          margin: 0 0 15px 0;
+          @include media_min(sm-min) {
+            margin: 0 0 10px 0;
+          }
+
+          &-blue {
+            @include media_min(sm-min) {
+              background-color: $color-green;
+            }
+          }
+        }
+
+        &-row {
+          $image-width: 100px;
+
+          &-image {
+            width: $image-width;
+            @include media_min(sm-min) {
+              position: absolute;
+              left: -1px;
+              top: -1px;
+              width: 231px;
+            }
+
+            img {
+              @include media_min(sm-min) {
+                position: relative;
+                z-index: 1;
+              }
+            }
+
+            &::after {
+              @include media_min(sm-min) {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 1px;
+                bottom: 0;
+                z-index: 2;
+                background: linear-gradient(180deg, rgba(6, 8, 9, 0) 75%, #000000 99.92%, #060809 99.93%, rgba(204, 204, 204, 0.686417) 99.94%, rgba(177, 177, 177, 0.729419) 99.95%, #060809 99.96%, rgba(0, 0, 0, 0.533801) 99.97%, #060809 99.98%);
+              }
+            }
+
+          }
+
+          &-title {
+            width: calc(100% - #{$image-width});
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.2;
+            text-align: center;
+            color: $color-dark-alt;
+            margin: 0;
+            padding: 0 0 0 15px;
+            @include media_min(sm-min) {
+              text-align: left;
+              font-weight: 400;
+              width: 100%;
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      &-body {
+        padding: 15px 20px;
+        @include media_min(sm-min) {
+          margin-left: 230px;
+          position: relative;
+          padding: 15px;
+        }
+
+        &::before {
+          @include media_min(sm-min) {
+            content: '';
+            display: block;
+            background-color: #060809;
+            top: 0;
+            bottom: 0;
+            left: -231px;
+            position: absolute;
+            z-index: -1;
+            width: 230px;
+          }
+        }
+
+        &-row {
+          margin: 0 0 15px 0;
+          @include media_min(sm-min) {
+            flex-direction: column;
+            width: calc(33.33% - 7px);
+          }
+
+          > div {
+            width: 50%;
+            @include media_min(sm-min) {
+              width: 100%;
+            }
+
+            &:not(:last-child) {
+              @include media_min(sm-min) {
+                margin: 0 0 10px 0;
+              }
+            }
+
+            small,
+            strong {
+              color: $color-dark-alt;
+              line-height: 1.1;
+            }
+
+            small {
+              display: block;
+              font-size: 14px;
+              margin: 0 0 5px 0;
+            }
+
+            strong {
+              font-weight: 700;
+              font-size: 18px;
+            }
+          }
+
+          &:not(:last-child) {
+            @include media_min(sm-min) {
+              margin-right: 15px;
+            }
+          }
+
+          &:last-child {
+            @include media_max(sm) {
+              display: none;
+            }
+          }
+
+        }
+
+        &-btns {
+          @include media_min(sm-min) {
+            justify-content: space-between;
+          }
+
+          .btn {
+            position: relative;
+
+            @include media_min(sm-min) {
+              width: calc(33.33% - 7px);
+            }
+
+            &:not(:last-child) {
+              @include media_max(sm) {
+                display: none;
+              }
+            }
+
+            span {
+
+              @media (min-width: 992px) and (max-width: 1100px) {
+                display: none;
+              }
+            }
+
+          }
+
+        }
+
+        &-rows {
+          @include media_min(sm-min) {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+        }
+
+        &-btngroup {
+          @include media_min(sm-min) {
+            background-color: #060809;
+            position: absolute;
+            left: -231px;
+            top: 71px;
+            bottom: 0;
+            width: 230px;
+            z-index: 3;
+            padding: 15px;
+
+          }
+
+          > div {
+
+            .btn {
+
+              &:not(:last-child) {
+                @include media_min(sm) {
+                  margin-bottom: 15px;
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+
+      &-footer {
+        background-color: $background-gray;
+        border-top: 1px solid $border-grey;
+        padding: 10px 20px 10px 20px;
+
+        &-collapse {
+          color: $color-dark-alt;
+          text-decoration: none;
+          line-height: 1.1;
+          position: relative;
+          display: inline-block;
+
+          &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            border-bottom: $color-green 1px dashed;
+          }
+
+          &:hover {
+            &::after {
+              opacity: 0;
+            }
+          }
+        }
+
+        &-text {
+          padding: 15px 0 0 0;
+          font-size: 14px;
+          color: #000;
+          line-height: 1.4;
+          @include media_min(sm) {
+            display: none;
+          }
+
+          ol {
+            margin: 0 0 0 10px;
+            padding: 0;
+
+            > li {
+
+              &:not(:last-child) {
+                margin: 0 0 5px 0;
+              }
+            }
+          }
+        }
+
+        &.active {
+          .products__list-card-footer-text {
+            display: block;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
